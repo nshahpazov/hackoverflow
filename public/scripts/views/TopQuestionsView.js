@@ -1,6 +1,7 @@
 define(function (require) {
 	var Backbone = require('backbone');
 	var QuestionCollection = require('collections/QuestionCollection');
+	var TopQuestionView = require('views/TopQuestionView');
 	var TopQuestionsView = Backbone.View.extend({
 		
 		tagName: 'ul',
@@ -8,11 +9,19 @@ define(function (require) {
 
 		initialize: function(intialQuestions) {
 			this.collection = new QuestionCollection(intialQuestions);
-			this.collection.fetch({reset: true});
+			var that = this;
+			this.collection.fetch({ 
+					reset: true,
+				 	
+				 	success: function() {
+						that.render();
+					} 
+				});
+			debugger;
 		},
 
 		addOne: function(topQuestion) {
-			var questionView = new this.TopQuestionsView( {model: topQuestion} );
+			var questionView = new TopQuestionView( { model: topQuestion } );
 			this.$el.append( questionView.render().el );
 		},
 

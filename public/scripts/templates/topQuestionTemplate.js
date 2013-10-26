@@ -4,7 +4,7 @@ return function anonymous(locals) {
 jade.debug = [{ lineno: 1, filename: "templates/topQuestionTemplate.jade" }];
 try {
 var buf = [];
-var locals_ = (locals || {}),title = locals_.title,author = locals_.author,answers = locals_.answers,views = locals_.views,date = locals_.date;jade.debug.unshift({ lineno: 1, filename: jade.debug[0].filename });
+var locals_ = (locals || {}),title = locals_.title,author = locals_.author,answers = locals_.answers,views = locals_.views,date = locals_.date,tags = locals_.tags;jade.debug.unshift({ lineno: 1, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 1, filename: jade.debug[0].filename });
 buf.push("<div id=\"topQuestion\" class=\"topQuestion\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
@@ -41,13 +41,13 @@ jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.shift();
 buf.push("</" + (date) + ">");
 jade.debug.shift();
-jade.debug.unshift({ lineno: 8, filename: jade.debug[0].filename });
-buf.push("<ul>");
+jade.debug.unshift({ lineno: 7, filename: jade.debug[0].filename });
+buf.push("<ul class=\"tags-list\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 8, filename: jade.debug[0].filename });
-// iterate ["A", "B", "C"]
+// iterate tags
 ;(function(){
-  var $$obj = ["A", "B", "C"];
+  var $$obj = tags;
   if ('number' == typeof $$obj.length) {
 
     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
@@ -55,8 +55,11 @@ jade.debug.unshift({ lineno: 8, filename: jade.debug[0].filename });
 
 jade.debug.unshift({ lineno: 8, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 9, filename: jade.debug[0].filename });
-buf.push("<li>" + (jade.escape(null == (jade.interp = tag) ? "" : jade.interp)));
+buf.push("<li class=\"tag\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 9, filename: jade.debug[0].filename });
+buf.push("" + (jade.escape((jade.interp = tag) == null ? '' : jade.interp)) + "");
+jade.debug.shift();
 jade.debug.shift();
 buf.push("</li>");
 jade.debug.shift();
@@ -70,8 +73,11 @@ jade.debug.shift();
 
 jade.debug.unshift({ lineno: 8, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 9, filename: jade.debug[0].filename });
-buf.push("<li>" + (jade.escape(null == (jade.interp = tag) ? "" : jade.interp)));
+buf.push("<li class=\"tag\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 9, filename: jade.debug[0].filename });
+buf.push("" + (jade.escape((jade.interp = tag) == null ? '' : jade.interp)) + "");
+jade.debug.shift();
 jade.debug.shift();
 buf.push("</li>");
 jade.debug.shift();

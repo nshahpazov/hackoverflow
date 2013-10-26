@@ -5,17 +5,14 @@ define(function (require) {
 	var TopQuestionView = Backbone.View.extend({
 		
 		tagName: 'li',
-		id: 'top-questions-list',
 
 		template: topQuestionTemplate,
 
-		initialize: function(intialQuestions) {
-			this.collection = new Collection(intialQuestions);
-			this.collection.fetch({reset: true});
-		},
+
 
 		render: function() {
-			this.collection.each(this.addOne, this);
+			var templ = this.template( this.model.toJSON() );
+			this.$el.html(templ);
 			return this;
 		}
 	});

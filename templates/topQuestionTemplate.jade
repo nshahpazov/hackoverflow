@@ -4,8 +4,7 @@ div(id="topQuestion", class="topQuestion")
 	#{answers}
 	#{views}
 	#{date}
-	ul
-		for tag in ["A", "B", "C"]
-			li= tag
-
-
+	ul.tags-list
+		for tag in tags
+			li.tag #{tag}
+						

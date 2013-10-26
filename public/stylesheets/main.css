@@ -1,19 +1,15 @@
-body{
+body {
   background-color: #fff !important;
 }
-
-ul.tags-list{
+ul.tags-list {
   list-style: none;
 }
-
-ul.tags-list li{
+ul.tags-list li {
   float: left;
 }
-
-.tag:after{
+.tag:after {
   content: ", ";
 }
-
-.tag:last-child:after{
+.tag:last-child:after {
   content: "";
 }

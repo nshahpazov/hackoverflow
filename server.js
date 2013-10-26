@@ -2,11 +2,11 @@ var app_root = __dirname;
 var express = require('express');
 var mongoose = require('mongoose');
 var less_middleware = require('less-middleware');
-
+var less = require('less');
 var app = express();
 
 var pub_dir = app_root + '/public';
-var styles_dir = pub_dir + '/styles';
+var styles_dir = pub_dir + '/stylesheets';
 var views_dir = app_root + '/views';
 
 var models = {};
@@ -58,7 +58,6 @@ app.post('/questions', function(request, response) {
     console.log("Creating question");
     var question = new models.Question({
 		title: request.body.title,
-		author: request.body.author,
 		text: request.body.text,
 		votes_count: request.body.votes_count,
 		answers_count: request.body.answers_count,
@@ -75,7 +74,6 @@ app.post('/questions', function(request, response) {
         }
     });
 });
-
 
 app.get('/questions', function(req, res) {
 	return models.Question.find( function(err, questions) {

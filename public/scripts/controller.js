@@ -18,6 +18,7 @@ define( function(require ) {
 
 		showTopQuestions: function() {
 			var topQuestionView = new TopQuestionsView();
+			debugger;
 			renderView(topQuestionView);
 		},
 
