@@ -1,16 +1,13 @@
 define(function (require) {
 	var Backbone = require('backbone');
-	var topQuestionsTemplate = require('templates/topQuestionsTemplate');
-
+	var QuestionCollection = require('collections/QuestionCollection');
 	var TopQuestionsView = Backbone.View.extend({
 		
 		tagName: 'ul',
 		id: 'top-questions-list',
 
-		template: topQuestionsTemplate,
-
 		initialize: function(intialQuestions) {
-			this.collection = new Collection(intialQuestions);
+			this.collection = new QuestionCollection(intialQuestions);
 			this.collection.fetch({reset: true});
 		},
 

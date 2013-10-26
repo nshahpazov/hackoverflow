@@ -6,6 +6,7 @@ define( function(require) {
 			'question': 'showQuestion',
 			'topQuestions': 'showTopQuestions',
 			'createQuestion': 'showCreateQuestion' 
+			// 'createQuestion': 'showCreateQuestion' 
 		}
 	});
 });

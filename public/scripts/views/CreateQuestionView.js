@@ -1,8 +1,8 @@
 define(function (require) {
 	var Backbone = require('backbone'),
 		_ = require('underscore');
-	var createQuestionTemplate = require('templates/createQuestionTemplate');
-
+	var createQuestionTemplate = require('templates/addQuestion');
+	var QuestionCollection = require('collections/QuestionCollection');
 	var CreateQuestionView = Backbone.View.extend({
 		
 		tagName: 'div',
@@ -11,8 +11,8 @@ define(function (require) {
 		template: createQuestionTemplate,
 
 		initialize: function(intialQuestions) {
-			this.collection = new Collection(intialQuestions);
-			this.collection.fetch({reset: true});
+			this.collection = new QuestionCollection(intialQuestions);
+			this.collection.fetch({ reset: true });
 		},
 
 		events: {
@@ -48,17 +48,18 @@ define(function (require) {
 
 			this.collection.create(newQuestion);
 		},
-
+		/*
 		validate: function(data) {
 			if (data.title.length === 0) { return 'Insert title.'; }
 			if (data.text.length === 0) { return 'Insert question.'; }
-		}
+		},
+		*/
 
 		render: function() {
-			var templ = this.template(this.model.toJSON() );
+			var templ = this.template();
 			this.$el.html(templ);
 			return this;
 		}
 	});
-	return QuestionView;
+	return CreateQuestionView;
 });

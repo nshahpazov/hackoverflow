@@ -8,10 +8,10 @@ function(require){
    	    	author: 'Robert De Niro',
             text: 'This is the text of the question',
             date: new Date(),
-            views: 0,
-            answers: 0,
-            votes: 0,
-            answers: []
+            views_count: 0,
+            answers_count: 0,
+            votes_count: 0/*,
+            answers: []*/
         },
 
         parse: function(response) {
