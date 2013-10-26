@@ -1,0 +1,11 @@
+form(method="post", action="#", name="input")
+	div(class="input-group")
+		span(class="input-group-addon") Заглавие: 
+		input(type="text", class="form-control", placeholder="Заглавие", name="title", id="title")
+	div(class="input-group")
+		span(class="input-group-addon") Bъпрос:
+		textarea(placeholder="опишете въпроса си тук", name="text", class="form-control", rows="3", id="text")
+	div(class="input-group")
+		span(class="input-group-addon") Тагове:
+		input(type="text", class="form-control", placeholders="добавете тагове, разделени със запетай", name="tags", id="tags")
+	input(type="submit", value="Submit", class="btn btn-primary btn-lg")

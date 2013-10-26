@@ -48,6 +48,12 @@ app.get('/', function(request, response) {
 	response.render("index", { title: "This is the Hakckoverflow " });
 });
 
+app.get('/viewThem', function(request, response) {
+	response.render("viewThem", { title: "This is the view of items " });
+});
+
+
+
 app.post('/questions', function(request, response) {
     console.log("Creating question");
     var question = new models.Question({
@@ -80,6 +86,5 @@ app.get('/questions', function(req, res) {
 		}
 	});
 });
-
 
 

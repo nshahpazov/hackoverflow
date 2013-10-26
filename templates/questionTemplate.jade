@@ -1,10 +1,6 @@
 article(id="question") 
 	header(id="title") #{title}
 	body(id="text") #{text}
-	footer(id="footer") 
-		#{date}, от #{author}
-		Отговори: #{answers} Видяна: #{views}
-
-		span(id="tags")Тагове: {#tags}
-
-		span(id="tags") Тагове: {#tags}
+	footer(id="footer") #{date}, от #{author}
+		p(id="revies")Отговори: #{answers} Видяна: #{views}
+		p(id="revies") Тагове: {#tags}

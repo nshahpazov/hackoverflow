@@ -1,16 +1,11 @@
-
 div(id="topQuestion", class="topQuestion")
-//- zaglavie avtor answers views
 	a(href="#", id="title") #{title} 
 	#{author}
 	#{answers}
 	#{views}
 	#{date}
-	{"tags": ["A", "B", "C"]}
 	ul
-		for tag in tags
-			li= book
-		else
-			li no tags!
+		for tag in ["A", "B", "C"]
+			li= tag
 
 
