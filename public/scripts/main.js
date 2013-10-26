@@ -27,3 +27,7 @@ require.config({
         'form': ['jquery']
     }
 });
+
+require(['app'], function(app) {
+    app.start();
+});
