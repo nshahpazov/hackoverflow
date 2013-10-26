@@ -51,6 +51,37 @@ app.get('/viewThem', function(request, response) {
 
 
 
+app.post('/questions', function(request, response) {
+    console.log("Creating question");
+    var question = new models.Question({
+		title: request.body.title,
+		author: request.body.author,
+		text: request.body.text,
+		votes_count: request.body.votes_count,
+		answers_count: request.body.answers_count,
+		views_count: request.body.views_count,
+		tags: request.body.tags
+	});
 
+	//needs validation!
+	question.save( function(err) {
+        if (!err) {
+            return console.log("Created a question");
+        } else {
+            return console.log(err);
+        }
+    });
+});
+
+
+app.get('/questions', function(req, res) {
+	return models.Question.find( function(err, questions) {
+		if (!err) {
+			res.send(questions);
+		} else {
+			console.log(err);
+		}
+	});
+});
 
 

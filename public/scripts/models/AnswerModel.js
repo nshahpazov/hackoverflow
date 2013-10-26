@@ -5,8 +5,8 @@ require.define(function (require) {
 		defauts: {
 			text: '',
 			author: '',
-			date: '',
-			votes: 0,
+			date: new Date(),
+			votes_count: 0,
 		},
 
 		validate: function(attrs, options) { 
