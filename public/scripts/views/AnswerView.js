@@ -7,7 +7,7 @@ require.define(function (require) {
 		template: answerTemplate( this.model.toJSON() ),
 
 		initialize: function() {
-			this.model.on('Answer', this.render, this);
+			this.model.on('AnswerModel', this.render, this);
 		},
 
 		events: {

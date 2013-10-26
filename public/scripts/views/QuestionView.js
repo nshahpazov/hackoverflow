@@ -8,7 +8,7 @@ require.define(function (require) {
 		template: questionTemplate( this.model.toJSON() ),
 
 		initialize: function() {
-			this.model.on('Question', this.render, this);
+			this.model.on('QuestionModel', this.render, this);
 		},
 
 		events: {
@@ -23,7 +23,7 @@ require.define(function (require) {
 			e.preventDefault();
 
 			// split and trim tags
-			tags = form.find('#tags').split(',');
+			tags = form.find('input#tags').val().split(',');
 			_.each(tags, function (tag, index) {
 				tags[index] = tag.replace(/^\s+|\s+$/g, '');
 			});
