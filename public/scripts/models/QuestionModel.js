@@ -1,30 +1,22 @@
-require.define(function (require) {
-	var Backbone = require('backbone'),
+define(
+function(require){
+    var Backbone = require('backbone');
+    var QuestionModel = Backbone.Model.extend({
+        defaults: {
+            title: 'Some Interesting Question I guess?',
+   	    	author: 'Robert De Niro',
+            text: 'This is the text of the question',
+            date: new Date(),
+    
+            views: 0,
+            answers: 0,
+            votes: 0
+        },
 
-	Question = Backbone.Model.extend({
-
-		initialize: function () {
-
-		},
-
-		defauts: {
-			title: '',
-			text: '',
-			tags: [],
-			author: '',
-			date: new Date(),
-			answers: 0,
-			views: 0
-		},
-
-		validate: function(attrs, options) { 
-			if (attrs.title.length === 0) { 
-				return "Insert title."; 
-			}
-			if (attrs.text.length === 0) { 
-				return "Insert question."; 
-			}
-		}
-
-	});
+        parse: function(response) {
+            response.id = response._id;
+            return response;        
+        }
+    });
+    return QuestionModel;
 });

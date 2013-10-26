@@ -1,7 +1,8 @@
 define( function(require ) {
 
 	var Marionette = require('marionette');
-	// var QuestionView = require('views/QuestionView');
+	var QuestionView = require('views/QuestionView');
+	var QuestionModel = require('models/QuestionModel');
 	
 	var renderView = function(view) {
 		$("#content").html( view.render().$el );
@@ -15,9 +16,9 @@ define( function(require ) {
 		showTopQuestions: function() {},
 
 		showQuestion: function() {
-			$("#content").html("Hello World");
-			// var questionView = new QuestionView();
-			// renderView(questionView);
+			var sampleModel = new QuestionModel({ title: 'Hello' });
+			var questionView = new QuestionView({ model: sampleModel });
+			renderView(questionView);
 		}
 	});
 	return Controller;
