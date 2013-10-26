@@ -9,6 +9,9 @@ var pub_dir = app_root + '/public';
 var styles_dir = pub_dir + '/styles';
 var views_dir = app_root + '/views';
 
+var models = {};
+models.Question = require('./models/question')(mongoose).model;
+
 
 // ========= CONFIGURATION =========
 
