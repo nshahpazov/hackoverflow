@@ -42,7 +42,7 @@ mongoose.connect('mongodb://localhost/hackoverflow');
 
 //Routes
 app.get('/', function(request, response) {
-	response.end("Server is running well");
+	response.render("index", { title: "This is the Hakckoverflow " });
 });
 
 
