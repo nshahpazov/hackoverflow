@@ -11,7 +11,7 @@ define(function (require) {
 		template: questionTemplate,
 
 		initialize: function() {
-			this.model.on('QuestionModel', this.render, this);
+			//this.model.on('QuestionModel', this.render, this);
 		},
 
 		render: function() {

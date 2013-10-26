@@ -4,7 +4,8 @@ define( function(require) {
 	return Marionette.AppRouter.extend({
 		appRoutes: {
 			'question': 'showQuestion',
-			'topQuestions': 'showTopQuestions' 
+			'topQuestions': 'showTopQuestions',
+			'createQuestion': 'showCreateQuestion' 
 		}
 	});
 });
