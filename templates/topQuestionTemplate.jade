@@ -1,0 +1,16 @@
+
+div(id="topQuestion", class="topQuestion")
+//- zaglavie avtor answers views
+	a(href="#", id="title") #{title} 
+	#{author}
+	#{answers}
+	#{views}
+	#{date}
+	{"tags": ["A", "B", "C"]}
+	ul
+		for tag in tags
+			li= book
+		else
+			li no tags!
+
+
