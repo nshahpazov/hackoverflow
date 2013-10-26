@@ -1,17 +1,12 @@
 require.define(function (require) {
-	var Backbone = require('backbone'),
-
-	Answer = Backbone.Model.extend({
-
-		initialize: function () {
-
-		},
+	var Backbone = require('backbone');
+	var AnswerModel = Backbone.Model.extend({
 
 		defauts: {
 			text: '',
 			author: '',
-			date: '',
-			votes: 0,
+			date: new Date(),
+			votes_count: 0,
 		},
 
 		validate: function(attrs, options) { 
@@ -21,4 +16,5 @@ require.define(function (require) {
 		}
 
 	});
+	return AnswerModel;
 });

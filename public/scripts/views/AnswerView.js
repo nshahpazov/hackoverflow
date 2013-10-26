@@ -1,10 +1,13 @@
 require.define(function (require) {
-	var Backbone = require('backbone'),
+	var Backbone = require('backbone');
+	var answerTemplate = require('templates/answerTemplate');
 
-	AnswerView = Backbone.View.extend({
+	var AnswerView = Backbone.View.extend({
+
 		tagName: 'div',
 		id: 'answer'
-		template: answerTemplate( this.model.toJSON() ),
+
+		template: answerTemplate,
 
 		initialize: function() {
 			this.model.on('AnswerModel', this.render, this);
@@ -25,20 +28,11 @@ require.define(function (require) {
 			this.model.set('votes', currentVotes - 1);
 		},
 
-		//Destroys the model of the task
-		destroy: function() {
-			this.model.destroy();
-		},
-
-		//Removes the element from the View
-		remove: function() {
-			this.$el.remove();
-		},
-
 		render: function() {
 			var templ = this.template();
 			this.$el.html(templ);
 			return this;
 		}
 	});
+	return AnswerView;
 });
