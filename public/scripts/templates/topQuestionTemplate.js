@@ -1,6 +1,7 @@
 define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
 
-return function anonymous(locals) {
+return function anonymous(locals
+/**/) {
 jade.debug = [{ lineno: 1, filename: "templates/topQuestionTemplate.jade" }];
 try {
 var buf = [];
@@ -90,6 +91,12 @@ jade.debug.shift();
 jade.debug.shift();
 jade.debug.shift();
 buf.push("</ul>");
+jade.debug.shift();
+jade.debug.unshift({ lineno: 10, filename: jade.debug[0].filename });
+buf.push("<span class=\"clrfix\">");
+jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
+jade.debug.shift();
+buf.push("</span>");
 jade.debug.shift();
 jade.debug.shift();
 buf.push("</div>");
