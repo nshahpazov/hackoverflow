@@ -17,7 +17,6 @@ define(function (require) {
 						that.render();
 					} 
 				});
-			debugger;
 		},
 
 		addOne: function(topQuestion) {

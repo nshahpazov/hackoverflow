@@ -1,5 +1,133 @@
-body {
-  background-color: #fff !important;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+#header {
+  margin: 0 auto;
+  background-color: #eee;
+}
+#header #logo {
+  float: left;
+}
+#header #signup,
+#header #login,
+#header #search {
+  float: right;
+}
+ul#top-questions-list {
+  width: 1000px;
+  display: table;
+  margin: 0 auto;
+}
+ul#top-questions-list li {
+  list-style-type: none;
+}
+ul#top-questions-list li .votes,
+ul#top-questions-list li .answers,
+ul#top-questions-list li .views {
+  float: left;
+  width: 80px;
+  height: 70px;
+}
+.wrapper {
+  width: 1000px;
+  display: table;
+  margin: 0 auto;
+}
+#navigation ul {
+  list-style: none;
+}
+#navigation li {
+  float: left;
+}
+#navigation:after {
+  clear: both;
+  content: "";
+  height: 0;
 }
 ul.tags-list {
   list-style: none;
@@ -19,16 +147,5 @@ ul.tags-list li {
   clear: both;
   visibility: hidden;
   line-height: 0;
-  height: 0;
-}
-#navigation ul {
-  list-style: none;
-}
-#navigation li {
-  float: left;
-}
-#navigation:after {
-  clear: both;
-  content: "";
   height: 0;
 }
