@@ -30,7 +30,7 @@ define( function(require ) {
 					var questionView = new QuestionView({ model: questionModel });
 					renderView(questionView);
 				}
-			 });
+			});
 		}
 	});
 	return Controller;
