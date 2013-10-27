@@ -9,7 +9,8 @@
 		a(href="#/questions/#{_id}", id="title") #{title} 
 	.metadata 
 		.date #{(new Date(date)).getDate()}-#{(new Date(date)).getMonth()}-#{(new Date(date)).getFullYear()} 
-		.author #{author}
+		.author 
+			a(href="#") #{author}
 	ul.tags-list
 		for tag in tags
 			li #{tag}

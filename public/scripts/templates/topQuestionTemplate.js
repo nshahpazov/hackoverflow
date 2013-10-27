@@ -1,6 +1,7 @@
 define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
 
-return function anonymous(locals) {
+return function anonymous(locals
+/**/) {
 jade.debug = [{ lineno: 1, filename: "templates/topQuestionTemplate.jade" }];
 try {
 var buf = [];
@@ -96,18 +97,27 @@ jade.debug.unshift({ lineno: 12, filename: jade.debug[0].filename });
 buf.push("<div class=\"author\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 12, filename: jade.debug[0].filename });
+buf.push(" ");
+jade.debug.shift();
+jade.debug.unshift({ lineno: 13, filename: jade.debug[0].filename });
+buf.push("<a href=\"#\">");
+jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 13, filename: jade.debug[0].filename });
 buf.push("" + (jade.escape((jade.interp = author) == null ? '' : jade.interp)) + "");
 jade.debug.shift();
 jade.debug.shift();
-buf.push("</div>");
+buf.push("</a>");
 jade.debug.shift();
 jade.debug.shift();
 buf.push("</div>");
 jade.debug.shift();
-jade.debug.unshift({ lineno: 13, filename: jade.debug[0].filename });
+jade.debug.shift();
+buf.push("</div>");
+jade.debug.shift();
+jade.debug.unshift({ lineno: 14, filename: jade.debug[0].filename });
 buf.push("<ul class=\"tags-list\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
-jade.debug.unshift({ lineno: 14, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 15, filename: jade.debug[0].filename });
 // iterate tags
 ;(function(){
   var $$obj = tags;
@@ -116,11 +126,11 @@ jade.debug.unshift({ lineno: 14, filename: jade.debug[0].filename });
     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
       var tag = $$obj[$index];
 
-jade.debug.unshift({ lineno: 14, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 15, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 16, filename: jade.debug[0].filename });
 buf.push("<li>");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
-jade.debug.unshift({ lineno: 15, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 16, filename: jade.debug[0].filename });
 buf.push("" + (jade.escape((jade.interp = tag) == null ? '' : jade.interp)) + "");
 jade.debug.shift();
 jade.debug.shift();
@@ -134,11 +144,11 @@ jade.debug.shift();
     for (var $index in $$obj) {
       $$l++;      var tag = $$obj[$index];
 
-jade.debug.unshift({ lineno: 14, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 15, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 16, filename: jade.debug[0].filename });
 buf.push("<li>");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
-jade.debug.unshift({ lineno: 15, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 16, filename: jade.debug[0].filename });
 buf.push("" + (jade.escape((jade.interp = tag) == null ? '' : jade.interp)) + "");
 jade.debug.shift();
 jade.debug.shift();
@@ -154,7 +164,7 @@ jade.debug.shift();
 jade.debug.shift();
 buf.push("</ul>");
 jade.debug.shift();
-jade.debug.unshift({ lineno: 16, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 17, filename: jade.debug[0].filename });
 buf.push("<span class=\"clrfix\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.shift();
@@ -163,7 +173,7 @@ jade.debug.shift();
 jade.debug.shift();
 buf.push("</div>");
 jade.debug.shift();
-jade.debug.unshift({ lineno: 17, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 18, filename: jade.debug[0].filename });
 buf.push("<div class=\"clrfix\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.shift();

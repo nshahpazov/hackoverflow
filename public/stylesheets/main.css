@@ -104,6 +104,15 @@ ul {
 #header #search {
   float: right;
 }
+ul#list-menu li {
+  float: left;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  background-color: #eee;
+}
+ul#list-menu li.active {
+  background-color: #fff;
+}
 ul#top-questions-list {
   width: 1000px;
   display: table;
@@ -188,10 +197,29 @@ ul#top-questions-list li .question ul.tags-list li {
   border-right: 1px solid #b3cee1;
   border-bottom: 1px solid #b3cee1;
 }
+ul#top-questions-list li .question ul.tags-list li:first-child {
+  margin-left: 0;
+}
 ul#top-questions-list li .question .metadata {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
+}
+ul#top-questions-list li .question .metadata .date,
+ul#top-questions-list li .question .metadata .author {
+  display: inline;
+}
+ul#top-questions-list li .question .metadata .date {
+  color: #ccc;
+}
+ul#top-questions-list li .question .metadata .author a:link,
+ul#top-questions-list li .question .metadata .author a:visited {
+  color: #0077cc;
+}
+ul#top-questions-list li .question .metadata .author a:hover,
+ul#top-questions-list li .question .metadata .author a:active {
+  color: #790000;
+  text-decoration: none;
 }
 .wrapper {
   width: 1000px;

@@ -2,17 +2,20 @@ define(function (require) {
 	var Backbone = require('backbone');
 	var QuestionCollection = require('collections/QuestionCollection');
 	var TopQuestionView = require('views/TopQuestionView');
+	var questionsListTemplate = require('templates/questionsListTemplate');
+
 	var TopQuestionsView = Backbone.View.extend({
 		
-		tagName: 'ul',
-		id: 'top-questions-list',
+		template: questionsListTemplate,
+		tagName: 'div',
+		id: 'top-questions',
 
 		initialize: function(intialQuestions) {
 			this.collection = new QuestionCollection(intialQuestions);
 			var that = this;
+debugger;	
 			this.collection.fetch({ 
 				reset: true,
-			 	
 			 	success: function() {
 					that.render();
 				} 
@@ -21,10 +24,13 @@ define(function (require) {
 
 		addOne: function(topQuestion) {
 			var questionView = new TopQuestionView( { model: topQuestion } );
-			this.$el.append( questionView.render().el );
+			this.$el.$ul.append( questionView.render().el );
 		},
 
 		render: function() {
+			var templ = this.template();
+			this.$el.html(templ);
+			this.$el.$ul = this.$el.find('#top-questions-list');
 			this.collection.each(this.addOne, this);
 			return this;
 		}
