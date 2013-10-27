@@ -1,11 +1,18 @@
-article(id="question") 
-	#title #{title}
-	#text #{text}
-	#footer #{date}, от #{author}
-		p#reviews Отговори: #{answers_count} Видяна: #{views_count}
-		p#tags Тагове: #{tags}
-	#ask-button(class='btn') Отговори!
-	div#answer-section
-		form
-			textarea
-			input(type='submit')
+div(class="question")
+	div(class="image")
+	img(src="images/voting.png", alt="Question view", width="60", height="55")
+	div(class="info")
+		#title #{title}
+		#text #{text}
+		#footer #{date}, от #{author}
+			p#reviews Отговори: #{answers_count} Видяна: #{views_count}
+			p#tags Тагове: 
+				ul.tags-list
+					for tag in tags
+						li #{tag}
+		span.clrfix
+		#ask-button(class='btn') Отговори!
+		div#answer-section
+			form
+				textarea
+				input(type='submit')
