@@ -51,7 +51,7 @@ jade.debug.unshift({ lineno: 6, filename: jade.debug[0].filename });
 buf.push(" ");
 jade.debug.shift();
 jade.debug.unshift({ lineno: 7, filename: jade.debug[0].filename });
-buf.push("<a href=\"#\">");
+buf.push("<a href=\"/#/createQuestion\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 7, filename: jade.debug[0].filename });
 buf.push("" + (jade.escape((jade.interp = "+ задай въпрос") == null ? '' : jade.interp)) + "");
