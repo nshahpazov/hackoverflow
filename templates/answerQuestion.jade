@@ -1,0 +1,12 @@
+article(id="question") 
+	#title #{title}
+	#text #{text}
+	#footer #{date}, от #{author}
+		p#reviews Отговори: #{answers_count} Видяна: #{views_count}
+		p#tags Тагове: #{tags}
+	#ask-button(class='btn') Отговори!
+	div#answer-section
+		form
+			textarea
+			input(type='submit')
+			///
