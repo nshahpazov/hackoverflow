@@ -1,9 +1,9 @@
 article(class="question")
-	div(class="info")
-		legend(class="legend", id="title") 
-			img(src="images/voting.png", alt="Question view", width="60", height="55") 
+	div(class="wrapper")
+		legend(class="legend", id="title")
+			img(src="images/voting.png", alt="Question view", width="60", height="55")
 			span #{title}
-		div(class="alert alert-warning")
+		div(class="alert alert-warning", id="div-message")
 			body(id="text") #{text}
 			footer(id="footer")
 				#{date}, от #{author}
@@ -17,6 +17,6 @@ article(class="question")
 			form
 				p(class="input-group-addon span-width") Haпиши отговор:
 				textarea(class="form-control input-field input-width", rows="3", id="text")
-				input(type="submit", class="btn btn-info", value="Отговори") 
+				input(type="submit", class="btn btn-info", value="Отговори")
 
 	
