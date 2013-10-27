@@ -4,8 +4,11 @@ article(id="question")
 	#footer #{date}, от #{author}
 		p#reviews Отговори: #{answers_count} Видяна: #{views_count}
 		p#tags Тагове: #{tags}
-	#ask-button(class='btn') Отговори!
+	p.your-answer Вашият отговор
 	div#answer-section
 		form
-			textarea
-			input(type='submit')
+			input#title(type="text", placeholder="Заглавие", class="input-field")
+			br
+			textarea#text(placeholder="Въведете своя отговор тук!",class="input-field", rows="10")
+			br
+			button#answer-button(type='submit', class='btn') Отговори

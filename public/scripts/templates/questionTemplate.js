@@ -1,7 +1,6 @@
 define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
 
-return function anonymous(locals
-/**/) {
+return function anonymous(locals) {
 jade.debug = [{ lineno: 1, filename: "templates/questionTemplate.jade" }];
 try {
 var buf = [];
@@ -58,13 +57,13 @@ jade.debug.shift();
 buf.push("</div>");
 jade.debug.shift();
 jade.debug.unshift({ lineno: 7, filename: jade.debug[0].filename });
-buf.push("<div id=\"ask-button\" class=\"btn\">");
+buf.push("<p class=\"your-answer\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 7, filename: jade.debug[0].filename });
-buf.push("Отговори!");
+buf.push("Вашият отговор");
 jade.debug.shift();
 jade.debug.shift();
-buf.push("</div>");
+buf.push("</p>");
 jade.debug.shift();
 jade.debug.unshift({ lineno: 8, filename: jade.debug[0].filename });
 buf.push("<div id=\"answer-section\">");
@@ -72,14 +71,29 @@ jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 10, filename: jade.debug[0].filename });
 buf.push("<form>");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
-jade.debug.unshift({ lineno: 11, filename: jade.debug[0].filename });
-buf.push("<textarea>");
+jade.debug.unshift({ lineno: 10, filename: jade.debug[0].filename });
+buf.push("<input id=\"title\" type=\"text\" placeholder=\"Заглавие\" class=\"input-field\"/>");
+jade.debug.shift();
+jade.debug.unshift({ lineno: 12, filename: jade.debug[0].filename });
+buf.push("<br/>");
+jade.debug.shift();
+jade.debug.unshift({ lineno: 12, filename: jade.debug[0].filename });
+buf.push("<textarea id=\"text\" placeholder=\"Въведете своя отговор тук!\" rows=\"10\" class=\"input-field\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.shift();
 buf.push("</textarea>");
 jade.debug.shift();
-jade.debug.unshift({ lineno: 11, filename: jade.debug[0].filename });
-buf.push("<input type=\"submit\"/>");
+jade.debug.unshift({ lineno: 14, filename: jade.debug[0].filename });
+buf.push("<br/>");
+jade.debug.shift();
+jade.debug.unshift({ lineno: 14, filename: jade.debug[0].filename });
+buf.push("<button id=\"answer-button\" type=\"submit\" class=\"btn\">");
+jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
+jade.debug.unshift({ lineno: 14, filename: jade.debug[0].filename });
+buf.push("Отговори");
+jade.debug.shift();
+jade.debug.shift();
+buf.push("</button>");
 jade.debug.shift();
 jade.debug.shift();
 buf.push("</form>");

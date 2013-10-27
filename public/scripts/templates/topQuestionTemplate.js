@@ -1,11 +1,10 @@
 define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
 
-return function anonymous(locals
-/**/) {
+return function anonymous(locals) {
 jade.debug = [{ lineno: 1, filename: "templates/topQuestionTemplate.jade" }];
 try {
 var buf = [];
-var locals_ = (locals || {}),votes_count = locals_.votes_count,answers_count = locals_.answers_count,views_count = locals_.views_count,title = locals_.title,date = locals_.date,author = locals_.author,tags = locals_.tags;jade.debug.unshift({ lineno: 1, filename: jade.debug[0].filename });
+var locals_ = (locals || {}),votes_count = locals_.votes_count,answers_count = locals_.answers_count,views_count = locals_.views_count,_id = locals_._id,title = locals_.title,date = locals_.date,author = locals_.author,tags = locals_.tags;jade.debug.unshift({ lineno: 1, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 1, filename: jade.debug[0].filename });
 buf.push("<div class=\"votes\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
@@ -30,14 +29,14 @@ jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 3, filename: jade.debug[0].filename });
 buf.push("" + (jade.escape((jade.interp = answers_count) == null ? '' : jade.interp)) + "");
 jade.debug.shift();
+jade.debug.shift();
+buf.push("</div>");
+jade.debug.shift();
 jade.debug.unshift({ lineno: 4, filename: jade.debug[0].filename });
 buf.push("<div class=\"sub-text\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 4, filename: jade.debug[0].filename });
 buf.push("answers");
-jade.debug.shift();
-jade.debug.shift();
-buf.push("</div>");
 jade.debug.shift();
 jade.debug.shift();
 buf.push("</div>");
@@ -67,7 +66,7 @@ jade.debug.unshift({ lineno: 8, filename: jade.debug[0].filename });
 buf.push("<div class=\"question-title\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 9, filename: jade.debug[0].filename });
-buf.push("<a href=\"#\" id=\"title\">");
+buf.push("<a" + (jade.attrs({ 'href':("/#/questions/" + (_id) + ""), 'id':("title") }, {"href":true,"id":true})) + ">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 9, filename: jade.debug[0].filename });
 buf.push("" + (jade.escape((jade.interp = title) == null ? '' : jade.interp)) + " ");

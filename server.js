@@ -84,7 +84,6 @@ app.get('/questions', function(req, res) {
 });
 
 app.get('/questions/:id', function(request, response) {
-	console.log("Hello World " + request.params.id);
 	var model = models.Question.findById(request.params.id,
 		function(err, question) {
 			if (!err) {
