@@ -1,18 +1,20 @@
-div(class="question")
-	div(class="image")
-	img(src="images/voting.png", alt="Question view", width="60", height="55")
+article(class="question")
 	div(class="info")
-		#title #{title}
-		#text #{text}
-		#footer #{date}, от #{author}
-			p#reviews Отговори: #{answers_count} Видяна: #{views_count}
-			p#tags Тагове: 
-				ul.tags-list
-					for tag in tags
-						li #{tag}
+		legend(class="legend", id="title") 
+			img(src="images/voting.png", alt="Question view", width="60", height="55") 
+			span #{title}
+		div(class="alert alert-warning")
+			body(id="text") #{text}
+			footer(id="footer")
+				#{date}, от #{author}
+				p#reviews Отговори: #{answers_count} Видяна: #{views_count}
+				p#tags Тагове: 
+					ul.tags-list
+						for tag in tags
+							li #{tag}
 		span.clrfix
-		#ask-button(class='btn') Отговори!
 		div#answer-section
 			form
-				textarea
-				input(type='submit')
+				span(class="input-group-addon span-width") Haпиши отговор:
+				textarea(class="form-control input-field input-width", rows="3", id="text")
+		 		input(type="submit", class="btn btn-info", value="Отговори") 
