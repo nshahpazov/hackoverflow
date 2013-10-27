@@ -13,7 +13,7 @@ define(function (require) {
 		initialize: function(intialQuestions) {
 			this.collection = new QuestionCollection(intialQuestions);
 			var that = this;
-debugger;	
+
 			this.collection.fetch({ 
 				reset: true,
 			 	success: function() {
