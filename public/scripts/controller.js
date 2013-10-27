@@ -22,8 +22,15 @@ define( function(require ) {
 		},
 
 		showQuestion: function(id) {
-			var questionView = new QuestionView();
-			renderView(questionView);
+			//fetch the model
+			var questionModel = new QuestionModel({ id: id });
+			questionModel.fetch({ 
+				reset: true,
+				success: function() {
+					var questionView = new QuestionView({ model: questionModel });
+					renderView(questionView);
+				}
+			 });
 		}
 	});
 	return Controller;
