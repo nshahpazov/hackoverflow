@@ -2,11 +2,11 @@ doctype 5
 html
 	head
 		title Hackoverflow System
-	link(rel='stylesheet', href='/stylesheets/main.css')
-	link(rel='stylesheet', href='/stylesheets/main2.css')
-	link(rel='stylesheet', href='/stylesheets/createQuestion.css')
-	link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
-	script(data-main='scripts/main', src='scripts/require.js')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+		link(rel='stylesheet', href='/stylesheets/main2.css')
+		link(rel='stylesheet', href='/stylesheets/createQuestion.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
+		script(data-main='scripts/main', src='scripts/require.js')
 	body
 		header#header
 			div.wrapper
@@ -17,15 +17,18 @@ html
 					a#login(href="#") Влез
 				span
 					a#signup(href="#") Регистрация
-	span.clrfix
+			span.clrfix
 	nav#navigation
-		ul
-			li
-				a#questions(href="#") Въпроси
-			li
-				a#tags(href="#") Предмети
-			li
-				a#users(href="#") Потребители
-			li
-				a#ask(href="#") Попитай
+			div.wrapper
+				ul
+					li
+						a#ask(href="#") Попитай
+					li
+						a#users(href="#") Потребители
+					li
+						a#tags(href="#") Предмети
+					li
+						a#questions(href="#") Въпроси
+
+				span.clrfix
 	block content
