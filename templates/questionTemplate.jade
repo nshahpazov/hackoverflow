@@ -1,6 +1,9 @@
 .wrapper
 	legend(class="legend", id="title")
-		img(src="images/voting.png", alt="Question view", width="60", height="55")
+		.vote-btns
+			img(src="images/vote-up.png", alt="", class="vote-up")
+			img(src="images/vote-down.png", alt="", class="vote-down")
+		.votes-count #{votes_count}
 		span#title #{title}
 	div(class="alert alert-warning", id="div-message")
 		body(id="text") #{text}
