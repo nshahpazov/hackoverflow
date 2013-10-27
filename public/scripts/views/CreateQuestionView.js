@@ -40,7 +40,6 @@ define(function (require) {
 				}
 				$(el).val("");
 			});
-			debugger;
 			this.collection.create(newQuestion);
 		},
 
