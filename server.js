@@ -10,8 +10,8 @@ var styles_dir = pub_dir + '/stylesheets';
 var views_dir = app_root + '/views';
 
 var models = {};
-models.Question = require('./models/question')(mongoose).model;
-
+models.Answer = require('./models/answer');
+models.Question = require('./models/question')(mongoose, models.Answer).model;
 
 // ========= CONFIGURATION =========
 
@@ -52,8 +52,6 @@ app.get('/viewThem', function(request, response) {
 	response.render("viewThem", { title: "This is the view of items " });
 });
 
-
-
 app.post('/questions', function(request, response) {
     console.log("Creating question");
     var question = new models.Question({
@@ -85,4 +83,14 @@ app.get('/questions', function(req, res) {
 	});
 });
 
-
+app.get('/questions/:id', function(request, response) {
+	return models.Question.findById(request.params.id, 
+		function(err, questions) {
+			if (!err) {
+				res.send(questions);
+			} else {
+				console.log(err);
+			}
+		}
+	);
+});

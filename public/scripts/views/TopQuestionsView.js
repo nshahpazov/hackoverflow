@@ -11,13 +11,12 @@ define(function (require) {
 			this.collection = new QuestionCollection(intialQuestions);
 			var that = this;
 			this.collection.fetch({ 
-					reset: true,
-				 	
-				 	success: function() {
-						that.render();
-					} 
-				});
-			debugger;
+				reset: true,
+			 	
+			 	success: function() {
+					that.render();
+				} 
+			});
 		},
 
 		addOne: function(topQuestion) {

@@ -1,12 +1,17 @@
-div(id="topQuestion", class="topQuestion")
-	a(href="#", id="title") #{title} 
-	#{author}
-	#{answers}
-	#{views}
-	#{date}
+.votes #{votes_count} 
+	.sub-text votes
+.answers #{answers_count}
+	.sub-text answers
+.views #{views_count}
+	.sub-text views
+.question
+	.question-title
+		a(href="#/questions/#{_id}", id="title") #{title} 
+	.metadata 
+		.date #{(new Date(date)).getDate()}-#{(new Date(date)).getMonth()}-#{(new Date(date)).getFullYear()} 
+		.author #{author}
 	ul.tags-list
 		for tag in tags
-			li.tag #{tag}
-
+			li #{tag}
 	span.clrfix
-						
+.clrfix

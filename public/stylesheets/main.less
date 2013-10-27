@@ -1,6 +1,161 @@
-body{
-  background-color: #fff !important;
+/* CSS reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+ul {
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#header {
+  margin: 0 auto;
+  background-color: #eee;
+
+  #logo {
+    float: left;
+  }
+
+  #signup, #login, #search {
+    float: right;
+  }
+}
+
+ul#top-questions-list {
+  width: 1000px;
+  display: table;
+  margin: 0 auto !important;
+
+  li {
+    margin-bottom: 1px;
+
+    .votes, .answers, .views, .question {
+      position: relative;
+      float: left;
+    }
+    .votes, .answers, .views {
+      text-align: center;
+      line-height: 70px;
+      font-size: 18px;
+      font-weight: bold;
+      width: 80px;
+      height: 70px;
+
+      .sub-text {
+        position: absolute;
+        top: 45px;
+        width: 100%;
+        line-height: normal;
+        font-size: 13px;
+        font-weight: normal;
+      }
+    }
+    .votes {
+      color: #9aa5bb;
+      background-color: #fff;
+    }
+    .answers {
+      color: #790000;
+      background-color: #f2fafd;
+    }
+    .views {
+      color: #6e5999;
+      background-color: #e0f2f9;
+    }
+    .question {
+      overflow: hidden;
+      padding: 10px;
+      width: 740px;
+      height: 50px;
+      
+      &:hover {
+        background-color: #f2fafd;
+      }
+
+      .question-title {
+        position: absolute;
+        font-size: 16px;
+
+        a:link, a:visited {
+          color: #0077cc;
+        }
+
+        a:hover, a:active {
+          color: #790000;
+          text-decoration: none;
+        }
+      }
+
+      ul.tags-list {
+        position: absolute;
+        bottom: 0;
+
+        li {
+          display: block;
+          float: left;
+          margin: 5px;
+          padding: 2px 5px; 
+          color: #6b6da6;
+          font-size: 12px;
+          background-color: #e0eaf1;
+          border-right: 1px solid #b3cee1;
+          border-bottom: 1px solid #b3cee1;
+        }
+      }
+
+      .metadata {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.wrapper {
+  width: 1000px;
+  display: table;
+  margin: 0 auto;
+}
+
+#navigation ul{
+  list-style: none;
+}
+
+#navigation li{
+  float: left;
+}
+
+#navigation:after{
+  clear: both;
+  content: "";
+  height: 0;
+}
+
+
+
+
+
+/*
+
+
 
 ul.tags-list{
   list-style: none;
@@ -16,7 +171,7 @@ ul.tags-list li{
 
 .tag:last-child:after{
   content: "";
-}
+}*/
 
 .clrfix {
 	content: ".";
@@ -26,3 +181,4 @@ ul.tags-list li{
 	line-height: 0;
 	height: 0;
 }
+

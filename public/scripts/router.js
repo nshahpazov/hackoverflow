@@ -3,10 +3,9 @@ define( function(require) {
 
 	return Marionette.AppRouter.extend({
 		appRoutes: {
-			'question': 'showQuestion',
 			'topQuestions': 'showTopQuestions',
-			'createQuestion': 'showCreateQuestion' 
-			// 'createQuestion': 'showCreateQuestion' 
+			'createQuestion': 'showCreateQuestion',
+			'question/:id': 'showQuestion' 
 		}
 	});
 });
