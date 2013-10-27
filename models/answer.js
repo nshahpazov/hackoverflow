@@ -7,8 +7,8 @@ module.exports = function(mongoose) {
   		title: String, 
     	text: String,
     	votes_count: {type: Number, min: 0},
-        views_count: {type: Number, min: 0},
-        date: { type: Date, default: Date.now},
+      views_count: {type: Number, min: 0},
+      date: { type: Date, default: Date.now}
   	});
 
   	this.model = mongoose.model(collection, schema);

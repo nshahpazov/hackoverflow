@@ -1,7 +1,6 @@
 define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
 
-return function anonymous(locals
-/**/) {
+return function anonymous(locals) {
 jade.debug = [{ lineno: 1, filename: "templates/questionTemplate.jade" }];
 try {
 var buf = [];
@@ -153,7 +152,7 @@ jade.debug.shift();
 buf.push("</textarea>");
 jade.debug.shift();
 jade.debug.unshift({ lineno: 20, filename: jade.debug[0].filename });
-buf.push("<input type=\"submit\" value=\"Отговори\" class=\"btn btn-info\"/>");
+buf.push("<input type=\"submit\" id=\"answer-button\" value=\"Отговори\" class=\"btn btn-info\"/>");
 jade.debug.shift();
 jade.debug.shift();
 buf.push("</form>");

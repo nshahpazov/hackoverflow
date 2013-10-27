@@ -5,7 +5,8 @@ define( function(require) {
 		appRoutes: {
 			'questions': 'showTopQuestions',
 			'createQuestion': 'showCreateQuestion',
-			'questions/:id': 'showQuestion' 
+			'questions/:id': 'showQuestion', 
+			'/': 'showTopQuestions'
 		}
 	});
 });

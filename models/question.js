@@ -1,6 +1,6 @@
 module.exports = function(mongoose, answer) {
 	var Answer = answer(mongoose).schema;
-  	var Schema = mongoose.Schema;
+  var Schema = mongoose.Schema;
  	var ObjectId = Schema.ObjectId;
  	var collection = 'Question';
  	

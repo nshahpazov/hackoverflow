@@ -16,6 +16,7 @@ define(function (require) {
 		answerQuestion: function(e) {
 			e.preventDefault();
 			var newAnswer = {};
+			debugger;
 
 			// get data
 			this.$el.find('.input-field').each(function(i, el) {
@@ -23,9 +24,10 @@ define(function (require) {
 					newAnswer[el.id] = $(el).val();
 				}
 			});
-			var answersCollection = this.model.get('answersCollection');
-			answersCollection.push(newAnswer);
 			debugger;
+			var answersCollection = this.model.get('answersCollection');
+			debugger;
+			answersCollection.push(newAnswer);
 			this.model.save('answersCollection', answersCollection);
 		},		
 

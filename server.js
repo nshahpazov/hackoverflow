@@ -88,18 +88,22 @@ app.get('/questions/:id', function(request, response) {
 		function(err, question) {
 			if (!err) {
 				response.send(question);
-			}else{
-				console.log("ERRORR");
+			} else{
+				console.log(err);
 			}
-		});
-	//  return models.Question.findById(request.params.id, 
-	//  	function(err, question) {
-	// 		if (!err) {
-	// 			console.log(question);
-	// 			res.send(question);
-	// 		} else {
-	// 			console.log(err);
-	// 		}
-	// 	}
-	// );
+		}
+	);
+});
+
+app.put('/questions/:id', function(request, response) {
+	var newAnswerColleciton = response.body.answerCollection;
+	var conditions = {answersCollection: newAnswerColleciton };
+	//needs validation!
+	question.update(conditions, function(err) {
+        if (!err) {
+            return console.log("Created a question");
+        } else {
+            return console.log(err);
+        }
+    });
 });
