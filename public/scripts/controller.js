@@ -9,22 +9,19 @@ define( function(require) {
 		$("#content").html( view.render().$el );
 	}
 
-	var Controller = Marionette.Controller.extend({
+	var Controller = Marionette.Controller.extend( {
 		
 		showCreateQuestion: function() {
 			var createQuestionView = new CreateQuestionView();
 			renderView(createQuestionView);
-		}
-		 ,
+		},
 
 		 showTopQuestions: function() {
 		 	var topQuestionView = new TopQuestionsView();
 		 	renderView(topQuestionView);
-		 }
-		 ,
+		 },
 
 		showQuestion: function(id) {
-			debugger;
 		 	//fetch the model
 		 	var questionModel = new QuestionModel({id: id});
 		 	questionModel.fetch({ 
@@ -33,7 +30,7 @@ define( function(require) {
 		 			var questionView = new QuestionView({ model: questionModel });
 		 			renderView(questionView);
 		 		}
-		 	 });
+		 	});
 		 }
 	});
 	return Controller;

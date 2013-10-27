@@ -1,10 +1,8 @@
 doctype 5
 html
 	head
-		title title
+		title Hackoverflow System
 		link(rel='stylesheet', href='/stylesheets/main.css')
-		link(rel='stylesheet', href='/stylesheets/main2.css')
-		link(rel='stylesheet', href='/stylesheets/question.css')
 		link(rel='stylesheet', href='/stylesheets/createQuestion.css')
 		link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
 		script(data-main='scripts/main', src='scripts/require.js')
@@ -12,12 +10,9 @@ html
 		header#header
 			div.wrapper
 				h1#logo Hackoverflow
-				span
-					input#search(type='search', placeholder='Потърси Въпрос')
-				span
-					a#login(href="#") Влез
-				span
-					a#signup(href="#") Регистрация
+				input#search(type='search', placeholder='Потърси Въпрос')
+				a#login(href="#") Влез
+				a#signup(href="#") Регистрация
 			span.clrfix
 	nav#navigation
 			div.wrapper
