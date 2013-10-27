@@ -12,8 +12,8 @@ define(function (require) {
 			"click #title": "showQuestion",
 		},
 
-		showQuestion: function() {
-			// var router = new Router();
+		showQuestion: function(e) {
+			e.preventDefault();
 			var App = require('app');
 			App.router.navigate('/questions/' + this.model.id, {trigger: true});
 		},

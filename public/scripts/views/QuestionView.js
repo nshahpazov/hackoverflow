@@ -10,11 +10,23 @@ define(function (require) {
 
 		template: questionTemplate,
 		events: {
-			'click .answer': 'answerQuestion'
+			'click #answer-button': 'answerQuestion'
 		},
 
-		answerQuestion: function() {
-			
+		answerQuestion: function(e) {
+			e.preventDefault();
+			var newAnswer = {};
+
+			// get data
+			this.$el.find('.input-field').each(function(i, el) {
+				if ($(el).val() != "") {
+					newAnswer[el.id] = $(el).val();
+				}
+			});
+			var answersCollection = this.model.get('answersCollection');
+			answersCollection.push(newAnswer);
+			debugger;
+			this.model.save('answersCollection', answersCollection);
 		},		
 
 		render: function() {
