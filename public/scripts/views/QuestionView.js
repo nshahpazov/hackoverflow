@@ -9,13 +9,16 @@ define(function (require) {
 		id: 'question',
 
 		template: questionTemplate,
-
-		initialize: function() {
-			//this.model.on('QuestionModel', this.render, this);
+		events: {
+			'click .answer': 'answerQuestion'
 		},
 
+		answerQuestion: function() {
+			
+		},		
+
 		render: function() {
-			var templ = this.template(this.model.toJSON() );
+			var templ = this.template( this.model.toJSON() );
 			this.$el.html(templ);
 			return this;
 		}
