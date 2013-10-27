@@ -2,6 +2,7 @@ define(function (require) {
 	var Backbone = require('backbone');
 	var topQuestionTemplate = require('templates/topQuestionTemplate');
 	var Router = require('router');
+	
 	var TopQuestionView = Backbone.View.extend({
 		
 		tagName: 'li',
@@ -12,8 +13,9 @@ define(function (require) {
 		},
 
 		showQuestion: function() {
-			var router = new Router();
-			router.navigate('/questions/' + this.model.id, {trigger: true});
+			// var router = new Router();
+			var App = require('app');
+			App.router.navigate('/questions/' + this.model.id, {trigger: true});
 		},
 
 		render: function() {

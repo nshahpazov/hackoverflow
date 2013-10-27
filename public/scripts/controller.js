@@ -24,16 +24,17 @@ define( function(require) {
 		 ,
 
 		showQuestion: function(id) {
-		// 	//fetch the model
-		// 	var questionModel = new QuestionModel({id: id});
-		// 	questionModel.fetch({ 
-		// 		reset: true,
-		// 		success: function() {
-		// 			var questionView = new QuestionView({ model: x });
-		// 			renderView(questionView);
-		// 		}
-		// 	 });
-		}
+			debugger;
+		 	//fetch the model
+		 	var questionModel = new QuestionModel({id: id});
+		 	questionModel.fetch({ 
+		 		reset: true,
+		 		success: function() {
+		 			var questionView = new QuestionView({ model: questionModel });
+		 			renderView(questionView);
+		 		}
+		 	 });
+		 }
 	});
 	return Controller;
 });
