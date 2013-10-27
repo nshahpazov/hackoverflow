@@ -1,27 +1,29 @@
 doctype 5
 html
 	head
-		title= title
-		link(rel='stylesheet', href='/stylesheets/main.css')
-		link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
-		script(data-main='scripts/main', src='scripts/require.js')
-
+		title title
+	link(rel='stylesheet', href='/stylesheets/main.css')
+	link(rel='stylesheet', href='/stylesheets/main2.css')
+	link(rel='stylesheet', href='/stylesheets/createQuestion.css')
+	link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
+	script(data-main='scripts/main', src='scripts/require.js')
 	body
 		header#header
 			div.wrapper
 				h1#logo Hackoverflow
-				input#search(type='search', placeholder='Потърси Въпрос')
-				a#login(href="#") Влез
-				a#signup(href="#") Регистрация
-		span.clrfix
-		nav#navigation
-			ul
-				li 
-					a#questions(href="#") Въпроси
-				li 
-					a#tags(href="#") Предмети
-				li 
-					a#users(href="#") Потребители
-				li 
-					a#ask(href="#") Попитай
-		block content
+				div(class="header-buttons")
+					button(type="button" class="btn btn-info") Влез 
+					button(type="button" class="btn btn-info") Регистрация
+					input#search(type="search", placeholder="Потърси Въпрос")
+	span.clrfix
+	nav#navigation
+		ul
+			li
+				a#questions(href="#") Въпроси
+			li
+				a#tags(href="#") Предмети
+			li
+				a#users(href="#") Потребители
+			li
+				a#ask(href="#") Попитай
+	block content

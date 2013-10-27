@@ -1,0 +1,20 @@
+input[type="submit"] {
+  width: 120px;
+  margin-left: 510px;
+  display: block;
+}
+.span-width {
+  width: 80px;
+  font-size: 15px;
+  font-family: fantasy;
+  color: #8B7765;
+}
+.input-width {
+  width: 500px !important;
+}
+.legend {
+  width: 600px;
+  font-size: 25px !important;
+  font-family: fantasy !important;
+  color: black !important;
+}

@@ -1,0 +1,37 @@
+header {
+  background: #e5e696;
+  /* Old browsers */
+
+  background: -moz-radial-gradient(center, ellipse cover, #e5e696 0%, #d1d360 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #e5e696), color-stop(100%, #d1d360));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-radial-gradient(center, ellipse cover, #e5e696 0%, #d1d360 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-radial-gradient(center, ellipse cover, #e5e696 0%, #d1d360 100%);
+  /* Opera 12+ */
+
+  background: -ms-radial-gradient(center, ellipse cover, #e5e696 0%, #d1d360 100%);
+  /* IE10+ */
+
+  background: radial-gradient(ellipse at center, #e5e696 0%, #d1d360 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e696', endColorstr='#d1d360', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+
+}
+h1 {
+  margin: 1em 0 0.75em;
+  padding: 0 0 5px 0;
+  width: 200px;
+  font-size: 40px !important;
+  font-family: fantasy !important;
+  color: black !important;
+}
+.header-buttons {
+  float: left;
+}
