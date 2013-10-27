@@ -16,11 +16,13 @@ function(require){
             answersCollection: new AnswersCollection()
         },
 
+        urlRoot: "/questions",
+
         parse: function(response) {
 			response.id = response._id;
 			response.answersCollection = new AnswersCollection(response.answersCollection);
 			return response;        
-		}
+        }
     });
 	return QuestionModel;
 });

@@ -84,13 +84,24 @@ app.get('/questions', function(req, res) {
 });
 
 app.get('/questions/:id', function(request, response) {
-	return models.Question.findById(request.params.id, 
-		function(err, questions) {
+	console.log("Hello World " + request.params.id);
+	var model = models.Question.findById(request.params.id,
+		function(err, question) {
 			if (!err) {
-				res.send(questions);
-			} else {
-				console.log(err);
+				console.log();
+				response.send(question);
+			}else{
+				console.log("ERRORR");
 			}
-		}
-	);
+		});
+	//  return models.Question.findById(request.params.id, 
+	//  	function(err, question) {
+	// 		if (!err) {
+	// 			console.log(question);
+	// 			res.send(question);
+	// 		} else {
+	// 			console.log(err);
+	// 		}
+	// 	}
+	// );
 });

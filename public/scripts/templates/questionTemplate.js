@@ -5,7 +5,7 @@ return function anonymous(locals
 jade.debug = [{ lineno: 1, filename: "templates/questionTemplate.jade" }];
 try {
 var buf = [];
-var locals_ = (locals || {}),title = locals_.title,text = locals_.text,date = locals_.date,author = locals_.author,answers = locals_.answers,views = locals_.views;jade.debug.unshift({ lineno: 1, filename: jade.debug[0].filename });
+var locals_ = (locals || {}),title = locals_.title,text = locals_.text,date = locals_.date,author = locals_.author,answers_count = locals_.answers_count,views_count = locals_.views_count,tags = locals_.tags;jade.debug.unshift({ lineno: 1, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 1, filename: jade.debug[0].filename });
 buf.push("<article id=\"question\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
@@ -40,7 +40,7 @@ jade.debug.unshift({ lineno: 5, filename: jade.debug[0].filename });
 buf.push("<p id=\"reviews\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 5, filename: jade.debug[0].filename });
-buf.push("Отговори: " + (jade.escape((jade.interp = answers) == null ? '' : jade.interp)) + " Видяна: " + (jade.escape((jade.interp = views) == null ? '' : jade.interp)) + "");
+buf.push("Отговори: " + (jade.escape((jade.interp = answers_count) == null ? '' : jade.interp)) + " Видяна: " + (jade.escape((jade.interp = views_count) == null ? '' : jade.interp)) + "");
 jade.debug.shift();
 jade.debug.shift();
 buf.push("</p>");
@@ -49,7 +49,7 @@ jade.debug.unshift({ lineno: 6, filename: jade.debug[0].filename });
 buf.push("<p id=\"tags\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.unshift({ lineno: 6, filename: jade.debug[0].filename });
-buf.push("Тагове: {#tags}");
+buf.push("Тагове: " + (jade.escape((jade.interp = tags) == null ? '' : jade.interp)) + "");
 jade.debug.shift();
 jade.debug.shift();
 buf.push("</p>");

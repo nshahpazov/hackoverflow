@@ -20,6 +20,7 @@ debugger;
 					that.render();
 				} 
 			});
+
 		},
 
 		addOne: function(topQuestion) {
