@@ -41,14 +41,14 @@ ul {
   -moz-box-shadow: 0 0 5px #888;
   -webkit-box-shadow: 0 0 5px#888;
   box-shadow: 0 0 5px #888;
+  text-shadow: 1px 1px #fff;
+  text-shadow: inner 1px 1px #ccc ;
 
   #logo {
     float: left;
     font-size:40px !important;
     font-family: monospace !important;
     color: #fd7536 !important;
-    text-shadow: 1px 1px #fff;
-    text-shadow: inner 1px 1px #ccc ;
   }
   #signup, #login, #search {
     float: right;
@@ -72,9 +72,9 @@ ul {
 
 /* nav */
 #navigation {
-
   margin-top: -10px;
   padding: 10px;
+
   ul {
     li {
       float: left;
@@ -82,9 +82,10 @@ ul {
       color: #fd7536;
       text-shadow: 1px 1px #fff;
       text-shadow: inner 1px 1px #ccc ;
-      border-left: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-      background-color: #f2fafd;
+      border-left: 1px solid #f7fdff;
+      border-bottom: 1px solid #f7fdff;
+      background-color: #e0f2f9;
+
 /*
       a:link, a:visited {
         color: #fd7536;
@@ -101,10 +102,20 @@ ul {
       a:hover, a:active {
         color: #fd7536;
         text-decoration: none;
+        text-shadow: 1px 1px #fff;
+        text-shadow: inner 1px 1px #ccc ;
       } 
     }
+    li:first-child {
+      -webkit-border-bottom-left-radius: 5px;
+      -moz-border-bottom-left-radius: 5px;
+      border-bottom-left-radius: 5px; 
+    }
     li:last-child {
-      border-right: 1px solid #ddd;
+      border-right: 1px solid #f7fdff ;
+      -webkit-border-bottom-right-radius: 5px;
+      -moz-border-bottom-right-radius: 5px;
+      border-bottom-right-radius: 5px;
     }
   }
 }
