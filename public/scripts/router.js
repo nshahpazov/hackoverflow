@@ -3,7 +3,6 @@ define( function(require) {
 
 	return Marionette.AppRouter.extend({
 		appRoutes: {
-			'question': 'showQuestion',
 			'topQuestions': 'showTopQuestions',
 			'createQuestion': 'showCreateQuestion',
 			'questions/:id': 'showQuestion' 

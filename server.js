@@ -88,7 +88,6 @@ app.get('/questions/:id', function(request, response) {
 	var model = models.Question.findById(request.params.id,
 		function(err, question) {
 			if (!err) {
-				console.log();
 				response.send(question);
 			}else{
 				console.log("ERRORR");

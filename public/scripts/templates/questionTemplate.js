@@ -1,6 +1,7 @@
 define(['jade'], function(jade) { if(jade && jade['runtime'] !== undefined) { jade = jade.runtime; }
 
-return function anonymous(locals) {
+return function anonymous(locals
+/**/) {
 jade.debug = [{ lineno: 1, filename: "templates/questionTemplate.jade" }];
 try {
 var buf = [];

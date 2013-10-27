@@ -104,6 +104,43 @@ ul {
 #header #search {
   float: right;
 }
+ul#list-menu {
+  width: 1000px;
+  display: table;
+  margin: 0 auto !important;
+  border-bottom: 1px solid #acacac;
+}
+ul#list-menu li {
+  float: right;
+  padding: 5px;
+  border-top: 1px solid #acacac;
+  border-left: 1px solid #acacac;
+  border-right: 1px solid #fff;
+  /* gradienrt */
+
+  background-image: linear-gradient(bottom, #ebebeb 95%, #f5f5f5 42%);
+  background-image: -o-linear-gradient(bottom, #ebebeb 95%, #f5f5f5 42%);
+  background-image: -moz-linear-gradient(bottom, #ebebeb 95%, #f5f5f5 42%);
+  background-image: -webkit-linear-gradient(bottom, #ebebeb 95%, #f5f5f5 42%);
+  background-image: -ms-linear-gradient(bottom, #ebebeb 95%, #f5f5f5 42%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.95, #ebebeb), color-stop(0.42, #f5f5f5));
+}
+ul#list-menu li:first-child {
+  border-right: 1px solid #acacac;
+}
+ul#list-menu li:last-child {
+  margin-bottom: -1px;
+  border-bottom: 1px solid #fff;
+}
+ul#list-menu li.active {
+  background-color: #fff;
+  background-image: none;
+}
+ul#list-menu li:hover {
+  cursor: pointer;
+  background-color: #fff;
+  background-image: none;
+}
 ul#top-questions-list {
   width: 1000px;
   display: table;
@@ -188,10 +225,29 @@ ul#top-questions-list li .question ul.tags-list li {
   border-right: 1px solid #b3cee1;
   border-bottom: 1px solid #b3cee1;
 }
+ul#top-questions-list li .question ul.tags-list li:first-child {
+  margin-left: 0;
+}
 ul#top-questions-list li .question .metadata {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
+}
+ul#top-questions-list li .question .metadata .date,
+ul#top-questions-list li .question .metadata .author {
+  display: inline;
+}
+ul#top-questions-list li .question .metadata .date {
+  color: #ccc;
+}
+ul#top-questions-list li .question .metadata .author a:link,
+ul#top-questions-list li .question .metadata .author a:visited {
+  color: #0077cc;
+}
+ul#top-questions-list li .question .metadata .author a:hover,
+ul#top-questions-list li .question .metadata .author a:active {
+  color: #790000;
+  text-decoration: none;
 }
 .wrapper {
   width: 1000px;
