@@ -1,5 +1,4 @@
-define( function(require ) {
-
+define( function(require) {
 	var Marionette = require('marionette');
 	var QuestionModel = require('models/QuestionModel');
 	var QuestionView = require('views/QuestionView');
@@ -11,26 +10,29 @@ define( function(require ) {
 	}
 
 	var Controller = Marionette.Controller.extend({
+		
 		showCreateQuestion: function() {
 			var createQuestionView = new CreateQuestionView();
 			renderView(createQuestionView);
-		},
+		}
+		 ,
 
-		showTopQuestions: function() {
-			var topQuestionView = new TopQuestionsView();
-			renderView(topQuestionView);
-		},
+		 showTopQuestions: function() {
+		 	var topQuestionView = new TopQuestionsView();
+		 	renderView(topQuestionView);
+		 }
+		 ,
 
 		showQuestion: function(id) {
-			//fetch the model
-			var questionModel = new QuestionModel({ id: id });
-			questionModel.fetch({ 
-				reset: true,
-				success: function() {
-					var questionView = new QuestionView({ model: questionModel });
-					renderView(questionView);
-				}
-			});
+		// 	//fetch the model
+		// 	var questionModel = new QuestionModel({id: id});
+		// 	questionModel.fetch({ 
+		// 		reset: true,
+		// 		success: function() {
+		// 			var questionView = new QuestionView({ model: x });
+		// 			renderView(questionView);
+		// 		}
+		// 	 });
 		}
 	});
 	return Controller;

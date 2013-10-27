@@ -8,12 +8,11 @@ define(function (require) {
 
 		template: topQuestionTemplate,
 		events: {
-			"click #title": "showQuesiton",
+			"click #title": "showQuestion",
 		},
 
-		showQuesiton: function() {
+		showQuestion: function() {
 			var router = new Router();
-			debugger;
 			router.navigate('/questions/' + this.model.id, {trigger: true});
 		},
 
