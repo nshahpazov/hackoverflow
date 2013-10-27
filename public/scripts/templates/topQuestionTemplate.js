@@ -154,11 +154,7 @@ jade.debug.shift();
 jade.debug.shift();
 buf.push("</ul>");
 jade.debug.shift();
-<<<<<<< HEAD
-jade.debug.unshift({ lineno: 11, filename: jade.debug[0].filename });
-=======
 jade.debug.unshift({ lineno: 16, filename: jade.debug[0].filename });
->>>>>>> f29f0521acc8ce068f43381af117271885e0da6b
 buf.push("<span class=\"clrfix\">");
 jade.debug.unshift({ lineno: undefined, filename: jade.debug[0].filename });
 jade.debug.shift();
