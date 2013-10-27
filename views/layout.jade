@@ -11,10 +11,12 @@ html
 		header#header
 			div.wrapper
 				h1#logo Hackoverflow
-				div(class="header-buttons")
-					button(type="button" class="btn btn-info") Влез 
-					button(type="button" class="btn btn-info") Регистрация
-					input#search(type="search", placeholder="Потърси Въпрос")
+				span
+					input#search(type='search', placeholder='Потърси Въпрос')
+				span
+					a#login(href="#") Влез
+				span
+					a#signup(href="#") Регистрация
 	span.clrfix
 	nav#navigation
 		ul

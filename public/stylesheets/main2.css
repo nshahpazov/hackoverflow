@@ -29,9 +29,17 @@ h1 {
   padding: 0 0 5px 0;
   width: 200px;
   font-size: 40px !important;
-  font-family: fantasy !important;
+  font-family: monospace !important;
   color: black !important;
 }
 .header-buttons {
   float: left;
+}
+div span a {
+  margin-top: 16px;
+  margin-left: 10px;
+}
+div span input[type="search"] {
+  margin-top: 10px;
+  margin-left: 10px;
 }
