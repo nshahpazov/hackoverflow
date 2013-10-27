@@ -13,7 +13,7 @@ function(require){
             views_count: 0,
             answers_count: 0,
             votes_count: 0,
-            answersCollection: new AnswerCollection()
+            answersCollection: new AnswersCollection()
         },
 
         parse: function(response) {

@@ -18,13 +18,11 @@ define( function(require ) {
 
 		showTopQuestions: function() {
 			var topQuestionView = new TopQuestionsView();
-			debugger;
 			renderView(topQuestionView);
 		},
 
-		showQuestion: function() {
-			var sampleModel = new QuestionModel({ title: 'Hello' });
-			var questionView = new QuestionView({ model: sampleModel });
+		showQuestion: function(id) {
+			var questionView = new QuestionView();
 			renderView(questionView);
 		}
 	});
