@@ -10,7 +10,8 @@ var styles_dir = pub_dir + '/stylesheets';
 var views_dir = app_root + '/views';
 
 var models = {};
-models.Question = require('./models/question')(mongoose).model;
+models.Answer = require('./models/answer');
+models.Question = require('./models/question')(mongoose, models.Answer).model;
 
 
 // ========= CONFIGURATION =========

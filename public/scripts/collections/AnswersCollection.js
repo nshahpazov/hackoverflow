@@ -5,6 +5,6 @@ define( function(require) {
 	var AnswerCollection = Backbone.Collection.extend({
 		model: AnswerModel
 	});
-
+	
 	return AnswerCollection;
 });
