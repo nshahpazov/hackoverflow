@@ -1,5 +1,4 @@
 ul.tags-list {
-  position: absolute;
   bottom: 0;
 }
 ul.tags-list li {
@@ -16,6 +15,10 @@ ul.tags-list li {
 ul.tags-list li:first-child {
   margin-left: 0;
 }
-div {
-  display: inline-block;
+ul.tags-list li:hover {
+  cursor: pointer;
+  color: #790000;
+}
+.alert body {
+  margin-bottom: 20px;
 }

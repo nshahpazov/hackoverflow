@@ -1,22 +1,20 @@
-article(class="question")
-	div(class="info")
-		legend(class="legend", id="title") 
-			img(src="images/voting.png", alt="Question view", width="60", height="55") 
-			span #{title}
-		div(class="alert alert-warning")
-			body(id="text") #{text}
-			footer(id="footer")
-				#{date}, от #{author}
-				p#reviews Отговори: #{answers_count} Видяна: #{views_count}
-				p#tags Тагове: 
-					ul.tags-list
-						for tag in tags
-							li #{tag}
-		span.clrfix
-		div#answer-section
-			form
-				p(class="input-group-addon span-width") Haпиши отговор:
-				textarea(class="form-control input-field input-width", rows="3", id="text")
-				input(type="submit", class="btn btn-info", value="Отговори") 
-
-	
+.wrapper
+	legend(class="legend", id="title")
+		img(src="images/voting.png", alt="Question view", width="60", height="55")
+		span#title #{title}
+	div(class="alert alert-warning", id="div-message")
+		body(id="text") #{text}
+		footer(id="footer")
+			Публикувано на #{(new Date(date)).getDate()}-#{(new Date(date)).getMonth()}-#{(new Date(date)).getFullYear()} в #{(new Date(date)).getHours()}:#{(new Date(date)).getMinutes()}:#{(new Date(date)).getSeconds()}  , от #{author}
+			p#reviews Отговори: #{answers_count} Видяна: #{views_count}
+			p#tags Тагове: 
+				ul.tags-list
+					for tag in tags
+						li #{tag}
+				.clrfix
+	span.clrfix
+	div#answer-section
+		form
+			p(class="input-group-addon span-width") Haпиши отговор:
+			textarea(class="form-control input-field input-width", rows="3", id="text")
+			input(type="submit", class="btn btn-info", value="Отговори")	
