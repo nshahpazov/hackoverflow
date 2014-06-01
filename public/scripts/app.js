@@ -1,20 +1,22 @@
-define( function(require) {
-	var Marionette = require('marionette');
-	var Controller = require('controller');
-	var Router = require('router');
-	var Jade = require('jade');
+define( function (require) {
 
-	var initialize = function() {
-		Router.initialize();
-	}
+	var Marionette = require('marionette'),
+		Controller = require('controller'),
+		Router = require('router'),
+		Jade = require('jade'),
 
-	var app = new Marionette.Application();
+		initialize = function () {
+			Router.initialize();
+		},
+
+		app = new Marionette.Application();
 
 	app.router = new Router({
-		controller: new Controller({ app: app })
+		controller: new Controller({app: app})
 	});
 
-	app.addInitializer(function(options) {
+	// Start the history of the app
+	app.addInitializer(function (options) {
 		Backbone.history.start();
 	});
 

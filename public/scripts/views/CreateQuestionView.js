@@ -1,53 +1,65 @@
 define(function (require) {
+
 	var Backbone = require('backbone'),
-		_ = require('underscore');
-	var createQuestionTemplate = require('templates/createQuestion');
-	var QuestionCollection = require('collections/QuestionCollection');
-	var CreateQuestionView = Backbone.View.extend({
-		
-		tagName: 'div',
-		id: 'create-question',
+		_ = require('lodash'),
+		createQuestionTemplate = require('templates/createQuestion'),
+		QuestionCollection = require('collections/QuestionCollection'),
 
-		template: createQuestionTemplate,
+		// The Backbone View
+		CreateQuestionView = Backbone.View.extend({
+			
+			tagName: 'div',
 
-		initialize: function(intialQuestions) {
-			this.collection = new QuestionCollection(intialQuestions);
-			this.collection.fetch({ reset: true });
-		},
+			id: 'create-question',
 
-		events: {
-			'submit': 'createQuestion'
-		},
+			template: createQuestionTemplate,
 
-		createQuestion: function (e) {
-			e.preventDefault();
-			var newQuestion = {},
-				tags = [];
+			initialize: function (intialQuestions) {
+				this.collection = new QuestionCollection(intialQuestions);
+				this.collection.fetch({ reset: true });
+			},
 
-			// get data
-			this.$el.find('.input-field').each(function(i, el) {
-				if ($(el).val() != "") {
-					newQuestion[el.id] = $(el).val();
-				}
+			events: {
+				'submit': 'onSubmitHandler'
+			},
 
-				// split and trim tags
-				if (el.id === 'tags') {
-					tags = $(el).val().split(',');
-					_.each(tags, function (tag, index) {
-						tags[index] = tag.replace(/^\s+|\s+$/g, '');
-					});
-					newQuestion[el.id] = tags;
-				}
-				$(el).val("");
-			});
-			this.collection.create(newQuestion);
-		},
+			// Event handler for when creating a question
+			onSubmitHandler: function ($event) {
+				
+				var newQuestion = {},
+					tags = [];
 
-		render: function() {
-			var templ = this.template();
-			this.$el.html(templ);
-			return this;
-		}
-	});
+				$event.preventDefault();
+
+				// get data
+				this.$el.find('.input-field').each(function (i, el) {
+
+					if ($(el).val() != "") {
+						newQuestion[el.id] = $(el).val();
+					}
+
+					// split and trim tags
+					if (el.id === 'tags') {
+						tags = $(el).val().split(',');
+
+						_.each(tags, function (tag, index) {
+							tags[index] = tag.replace(/^\s+|\s+$/g, '');
+						});
+						
+						newQuestion[el.id] = tags;
+					}
+					$(el).val("");
+				});
+
+				this.collection.create(newQuestion);
+			},
+
+			render: function () {
+
+				this.$el.html(this.template());
+				return this;
+			}
+		});	// end of the view object
+
 	return CreateQuestionView;
 });

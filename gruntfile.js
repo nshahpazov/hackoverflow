@@ -1,6 +1,7 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+    
     grunt.initConfig({
-        jade:{
+        jade: {
             app: {                                                                    
                 options: {                                                              
                     amd: true,                                                           

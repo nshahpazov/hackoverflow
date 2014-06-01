@@ -1,6 +1,6 @@
 define(function (require) {
 	var Backbone = require('backbone'),
-		_ = require('underscore');
+		_ = require('lodash');
 	var questionTemplate = require('templates/questionTemplate');
 
 	var QuestionView = Backbone.View.extend({

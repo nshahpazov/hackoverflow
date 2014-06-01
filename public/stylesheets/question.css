@@ -1,6 +1,7 @@
 ul.tags-list {
   bottom: 0;
 }
+
 ul.tags-list li {
   display: block;
   float: left;
@@ -12,13 +13,16 @@ ul.tags-list li {
   border-right: 1px solid #b3cee1;
   border-bottom: 1px solid #b3cee1;
 }
+
 ul.tags-list li:first-child {
   margin-left: 0;
 }
+
 ul.tags-list li:hover {
   cursor: pointer;
   color: #790000;
 }
+
 .alert body {
   margin-bottom: 20px;
 }

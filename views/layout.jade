@@ -1,4 +1,3 @@
-doctype 5
 html
 	head
 		title Hackoverflow System
@@ -7,25 +6,37 @@ html
 		link(rel='stylesheet', href='/stylesheets/createQuestion.css')
 		link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.css')
 		script(data-main='scripts/main', src='scripts/require.js')
-	body
-		header#header
-			div.wrapper
-				h1#logo Hackoverflow
-				input#search(type='search', placeholder='Потърси Въпрос')
-				a#login(href="#") Влез
-				a#signup(href="#") Регистрация
-			span.clrfix
-	nav#navigation
-			div.wrapper
-				ul
-					li
-						a#ask(href="/#/createQuestion") Попитай
-					li
-						a#users(href="#") Потребители
-					li
-						a#tags(href="#") Предмети
-					li
-						a#questions(href="/#/questions") Въпроси
 
-				span.clrfix
-	block content
+	body
+		.container
+			nav(class="navbar navbar-inverse", role="navigation")
+
+					div#bs-example-navbar-collapse-1(class="collapse navbar-collapse")
+
+						ul(class="nav navbar-nav")
+							li.active
+								a(href="/#/createQuestion") Ask
+							li
+								a(href="#") Users
+							li
+								a(href="#") Tags
+							li
+								a(href="/#/questions") Questions
+
+						div(class="col-sm-3 col-md-3 pull-right")
+							form.navbar-form(role="search")
+								.input-group
+									input.form-control(type="text", placeholder="Search", name="search-term")
+									.input-group-btn
+										button(class="btn btn-default", type="submit")
+											i(class="glyphicon glyphicon-search")
+
+						div(class="col-sm-3 col-md-3 pull-right")
+							ul(class="nav navbar-nav")
+								li
+									a(href="/#/signup") Sign Up
+								li
+									a(href="/#/signup") Sign In
+
+						//- span.clrfix
+			block content
